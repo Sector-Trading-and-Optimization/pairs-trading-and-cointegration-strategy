@@ -145,16 +145,23 @@ The strategy tracks:
 
 ```
 pairs-trading-strategy/
-├── pairs_trading_strategy.py    # Main implementation file
-├── README.md                   # This file
-├── requirements.txt            # Dependencies
-└── results/
+├── Data/
+    ├── JNJ.csv  
+    └── V.csv 
+├── Notebooks/
+    └── pairs_trading.ipynb. #Notebook File with Results
+├── Src/
+    ├── pipeline.py
+    ├── strategy.py   
+    └── utils.py 
+└── Results/
     ├── correlation_matrix.png  # Asset correlation heatmap
-    ├── price_comparison.png    # Relative price movements
-    ├── spread_analysis.png     # Residuals plot
-    ├── zscore_plot.png        # Z-score with thresholds
-    ├── trading_signals.png    # Buy/sell signal visualization
-    └── portfolio_performance.png # P&L chart
+    ├── closing_data.png    # closing prices 
+    ├── residual_spread.png     # Residuals plot
+    ├── zscore.png        # Z-score with thresholds
+    ├── rel_close_data.png     # Relative price movements
+    ├── signals.png   # Buy/sell signal visualization
+    └── equity_curve.png # P&L chart
 ```
 
 ## Key Parameters
