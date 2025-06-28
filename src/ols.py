@@ -115,3 +115,31 @@ plt.axhline(y=1, color='b', label='1 threshold')
 plt.axhline(y=-1, color='b', label='-1 threshold')
 plt.legend()
 plt.show()
+
+def generate_trade_signals(S1, S2, spread, zscore):
+    trades = pd.DataFrame({
+        'price1': S1,
+        'price2': S2,
+        'spread': spread,
+        'zscore': zscore
+    })
+    trades.dropna(inplace=True)
+    trades['signal1'] = np.where(trades['zscore'] > 1, -1, np.where(trades['zscore'] < -1, 1, 0))
+    trades['signal2'] = -trades['signal1']
+    trades['position1'] = trades['signal1'].diff().apply(lambda x: 0 if abs(x) > 1 else x)
+    trades['position2'] = trades['signal2'].diff().apply(lambda x: 0 if abs(x) > 1 else x)
+    return trades
+
+trade_signals = generate_trade_signals(companies[asset2], companies[asset1], spread, zscore).dropna()
+
+def show_trade_signals(data):
+    fig = plt.figure(figsize=(14, 6))
+    ax = fig.add_subplot(111)
+    ax.plot(data['zscore'], color='#4abdac')
+    ax.plot(data['zscore'][data['position1'] == 1], lw=0, marker='^', c='g', markersize=8, alpha=0.9)
+    ax.plot(data['zscore'][data['position1'] == -1], lw=0, marker='v', c='r', markersize=8, alpha=0.9)
+    plt.title(f'{name_stock2} vs {name_stock1}')
+    plt.legend(['Z-Score', 'Buy', 'Sell'])
+    plt.show()
+
+show_trade_signals(trade_signals)
