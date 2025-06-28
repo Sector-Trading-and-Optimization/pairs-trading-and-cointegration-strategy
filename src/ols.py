@@ -69,7 +69,7 @@ plt.legend()
 plt.show()
 
 start = '2017-06-01' #START DATE
-end = '2020-06-01'  #END DATE
+end = '2023-07-31'  #END DATE
 
 name_stock1 = "JNJ"
 name_stock2 = "V"
@@ -143,3 +143,47 @@ def show_trade_signals(data):
     plt.show()
 
 show_trade_signals(trade_signals)
+
+def pnl_calculation(signals):
+
+  initial_capital = 50000
+
+  # Shares to buy for each stock
+  shares1 = initial_capital// (signals['price1'][0])
+  shares2 = initial_capital// (signals['price2'][0])
+
+  #PnL for stock 1
+  portfolio = pd.DataFrame()
+  portfolio['holdings1'] = signals['position1'].cumsum() * signals['price1'] * shares1
+  portfolio['cash1'] = initial_capital - (signals['position1'] * signals['price1'] * shares1).cumsum()
+  portfolio['total1'] = portfolio['holdings1'] + portfolio['cash1']
+  portfolio['return1'] = portfolio['total1'].pct_change()
+
+  # PnL for stock 2
+  portfolio['holdings2'] = signals['position2'].cumsum() * signals['price2'] * shares2
+  portfolio['cash2'] = initial_capital - (signals['position2'] * signals['price2'] * shares2).cumsum()
+  portfolio['total2'] = portfolio['holdings2'] + portfolio['cash2']
+  portfolio['return2'] = portfolio['total2'].pct_change()
+
+  # Total PnL
+  portfolio['total'] = portfolio['total1'] + portfolio['total2']
+  portfolio = portfolio.dropna()
+
+  return portfolio
+
+portfolio = pnl_calculation(trade_signals)
+portfolio.head()
+     
+def plot_portfolio_value(portfolio):
+  fig = plt.figure(figsize=(14,6),)
+  ax = fig.add_subplot(111)
+  l1, = ax.plot(portfolio['total'], c='g')
+  ax.set_ylabel('Asset Value')
+  ax.yaxis.labelpad=15
+  ax.set_xlabel('Date')
+  ax.xaxis.labelpad=15
+  plt.title('Portfolio Performance PnL')
+  plt.legend(['Total Portfolio Value'])
+     
+
+plot_portfolio_value(portfolio)
