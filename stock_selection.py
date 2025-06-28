@@ -58,3 +58,12 @@ ax = train[['asset1','asset2']].plot(figsize=(12, 6), title = 'Daily Closing Pri
 ax.set_ylabel("Closing Price")
 ax.grid(True);
 
+plt.figure(figsize=(14, 6))
+stock1_close_relative = companies[asset1] / companies[asset1].iloc[0]
+stock2_close_relative = companies[asset2]/ companies[asset2].iloc[0]
+plt.plot(stock1_close_relative , label = asset1 )
+plt.plot(stock2_close_relative , label = asset2 )
+plt.xlabel("Time")
+plt.ylabel("Rel Close Price")
+plt.legend()
+plt.show()
