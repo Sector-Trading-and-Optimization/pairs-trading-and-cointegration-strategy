@@ -2,6 +2,14 @@
 
 A Python implementation of statistical arbitrage using pairs trading based on cointegration analysis. This project demonstrates how to identify cointegrated stock pairs, generate trading signals using z-score analysis, and backtest the strategy performance.
 
+## Developer 
+
+Pratyush Kumar Swain : [Github](https://github.com/Pratyush439), [LinkedIn](https://www.linkedin.com/in/pratyush-kumar-swain-2313482a5/)
+Arsh Chand : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+Kavya Kumar Agrawal : [Github](https://github.com/Kavya-Agrawal), [LinkedIn](https://www.linkedin.com/in/kavya-kumar-agrawal/)
+Sanidhya Srivastava : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+Bhavya Bharti : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+
 ## Overview
 
 This pairs trading strategy identifies two stocks that historically move together (cointegrated) and trades on temporary divergences from their long-term equilibrium relationship. The implementation uses statistical tests to find cointegrated pairs and generates buy/sell signals when the spread between assets deviates significantly from its mean.
@@ -68,7 +76,7 @@ scikit-learn     # Data splitting utilities
 
 ```python
 # The main script includes all steps:
-python pairs_trading_strategy.py
+python pipeline.py
 ```
 
 ### 2. Key Functions
@@ -229,14 +237,6 @@ end = '2024-01-01'
 3. **Spread Analysis**: Visualizes the mean-reverting behavior of selected pairs
 4. **Trading Signals**: Shows entry/exit points based on z-score thresholds
 5. **Portfolio Performance**: Tracks cumulative P&L over the backtesting period
-
-## Future Enhancements
-
-- **Dynamic Hedging**: Implement time-varying hedge ratios
-- **Risk Management**: Add stop-loss and position sizing rules
-- **Transaction Costs**: Include realistic trading costs and slippage
-- **Multiple Pairs**: Extend to trade multiple pairs simultaneously
-- **Machine Learning**: Use ML models for better pair selection and timing
 
 ## Disclaimer
 
