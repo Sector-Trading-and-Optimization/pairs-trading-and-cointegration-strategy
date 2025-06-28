@@ -6,7 +6,7 @@ A Python implementation of statistical arbitrage using pairs trading based on co
 
 Pratyush Kumar Swain : [Github](https://github.com/Pratyush439), [LinkedIn](https://www.linkedin.com/in/pratyush-kumar-swain-2313482a5/)
 
-Arsh Chand : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+Arsh Chand : [Github](https://github.com/ArshChand), [LinkedIn](https://www.linkedin.com/in/arsh-chand)
 
 Kavya Kumar Agrawal : [Github](https://github.com/Kavya-Agrawal), [LinkedIn](https://www.linkedin.com/in/kavya-kumar-agrawal/)
 
