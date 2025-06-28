@@ -12,7 +12,7 @@ Kavya Kumar Agrawal : [Github](https://github.com/Kavya-Agrawal), [LinkedIn](htt
 
 Sanidhya Srivastava : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
 
-Bhavya Bharti : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+Bhavya Bharti : [Github](https://github.com/bhavyabhart), [LinkedIn](https://www.linkedin.com/in/bhavya-bharti-9313752a2/)
 
 ## Overview
 
