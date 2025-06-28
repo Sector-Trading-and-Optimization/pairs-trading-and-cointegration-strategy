@@ -10,7 +10,7 @@ Arsh Chand : [Github](https://github.com/ArshChand), [LinkedIn](https://www.link
 
 Kavya Kumar Agrawal : [Github](https://github.com/Kavya-Agrawal), [LinkedIn](https://www.linkedin.com/in/kavya-kumar-agrawal/)
 
-Sanidhya Srivastava : [Github](https://github.com/ArshChand), [LinkedIn](www.linkedin.com/in/arsh-chand)
+Sanidhya Srivastava : [Github](https://github.com/diffused-orbital), [LinkedIn](https://www.linkedin.com/in/sanidhya-srivastava-a991a2210/)
 
 Bhavya Bharti : [Github](https://github.com/bhavyabhart), [LinkedIn](https://www.linkedin.com/in/bhavya-bharti-9313752a2/)
 
