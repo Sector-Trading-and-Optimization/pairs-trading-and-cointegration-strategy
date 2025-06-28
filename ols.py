@@ -102,3 +102,16 @@ plt.ylabel("Values")
 plt.legend()
 plt.show()
 
+
+spread = errors
+zscore = (spread-np.mean(spread)) / np.std(spread)
+
+plt.figure(figsize=(14, 6))
+zscore.plot(label='z-score')
+plt.title(f"z-score {name_stock2}-{name_stock1}")
+plt.xlabel("Time")
+plt.ylabel("Values")
+plt.axhline(y=1, color='b', label='1 threshold')
+plt.axhline(y=-1, color='b', label='-1 threshold')
+plt.legend()
+plt.show()
