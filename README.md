@@ -1,6 +1,6 @@
 # Pairs Trading and Cointegration Strategy
 
-A Python implementation of statistical arbitrage using pairs trading based on cointegration analysis. This project demonstrates how to identify cointegrated stock pairs, generate trading signals using z-score analysis, and backtest the strategy performance.
+An implementation of statistical arbitrage using pairs trading based on cointegration analysis. This project demonstrates how to identify cointegrated stock pairs, generate trading signals using z-score analysis, and backtest the strategy performance.
 
 ## Developer 
 
@@ -25,7 +25,6 @@ This pairs trading strategy identifies two stocks that historically move togethe
 - **Correlation Analysis**: Comprehensive correlation matrix visualization
 - **Signal Generation**: Z-score based trading signals with configurable thresholds
 - **Portfolio Simulation**: Complete backtesting with P&L calculation
-- **Visualization**: Interactive plots for price movements, spreads, z-scores, and trading signals
 
 ## Strategy Logic
 
@@ -217,17 +216,6 @@ test_size = 0.5         # Train/test split ratio
 stocks = ["YOUR", "CUSTOM", "STOCK", "LIST"]
 ```
 
-### Adjust Trading Thresholds
-```python
-# More conservative approach
-entry_threshold = 2.0
-exit_threshold = 0.5
-
-# More aggressive approach  
-entry_threshold = 0.5
-exit_threshold = 0.0
-```
-
 ### Change Time Period
 ```python
 start = '2020-01-01'
@@ -246,20 +234,6 @@ end = '2024-01-01'
 
 This code is for educational and research purposes only. Past performance does not guarantee future results. Trading involves substantial risk of loss and is not suitable for all investors. Always conduct thorough testing and consider consulting with financial professionals before implementing any trading strategy.
 
-## References
-
-- Engle-Granger Cointegration Test
-- Johansen Cointegration Test  
-- Statistical Arbitrage Literature
-- Pairs Trading Academic Papers
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests for improvements. Suggested areas for contribution:
-- Enhanced visualization features
-- Additional statistical tests
-- Performance optimization
-- Extended backtesting metrics
 
 ---
 
